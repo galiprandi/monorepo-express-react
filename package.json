@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --parallel --filter=@* dev",
+    "start": "pnpm --parallel --filter=@* start",
+    "build": "pnpm --parallel --filter=@* build",
     "lint": "pnpm --parallel --filter=@monorepo-express-react/* lint"
   },
   "keywords": [],
