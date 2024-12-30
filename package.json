@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:galiprandi/monorepo-express-react.git"
+  },
   "scripts": {
     "dev": "pnpm --parallel --filter=@* dev",
     "start": "pnpm --parallel --filter=@* start",
