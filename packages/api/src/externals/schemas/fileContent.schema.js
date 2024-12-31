@@ -1,3 +1,3 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
-export const fileContentSchema = z.string(); // Assuming raw CSV content is a string.
+export const fileContentSchema = z.string() // Assuming raw CSV content is a string.

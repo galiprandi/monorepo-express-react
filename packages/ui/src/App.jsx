@@ -1,11 +1,11 @@
 import './App.css'
-import { FilesTable } from './components/FilesTable';
+import { FilesTable } from './components/FilesTable'
 
-function App() {
+function App () {
   return (
     <>
-      <header className="bg-primary">
-        <h2 >
+      <header className='bg-primary'>
+        <h2>
           React test App
         </h2>
       </header>
