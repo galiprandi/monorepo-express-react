@@ -1,7 +1,6 @@
 import './App.css'
 import { FilesTable } from './components/FilesTable';
 
-
 function App() {
   return (
     <>
