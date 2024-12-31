@@ -2,6 +2,7 @@ import './libs/env/config.js'; // Carga las variables de entorno
 import express from 'express';
 import logger from './libs/logger/logger.js';
 import cors from 'cors';
+import processData from './externals/services/processData.service.js';
 
 
 const app = express();
@@ -16,14 +17,9 @@ app.get('/health', (req, res) => {
   });
 });
 
-app.use('/files/data', (req, res) => {
-  res.json([
-    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
-    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
-    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
-    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
-    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
-  ]);
+app.use('/files/data', async (req, res) => {
+  const data = await processData();
+  res.json(data);
 });
 
 const PORT = process.env.PORT || 3000;
