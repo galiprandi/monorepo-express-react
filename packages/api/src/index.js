@@ -16,6 +16,16 @@ app.get('/health', (req, res) => {
   });
 });
 
+app.use('/files/data', (req, res) => {
+  res.json([
+    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
+    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
+    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
+    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
+    ['file1.csv', 'RgTya', 64075909, '70ad29aacf0b690b0467fe2b2767f765'],
+  ]);
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   logger.info(`🚀 Server running on http://localhost:${PORT}/health`);
