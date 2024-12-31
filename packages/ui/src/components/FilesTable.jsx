@@ -11,6 +11,7 @@ export const FilesTable = () => {
 
     if (status === 'loading') return <p>Loading...</p>
     if (status === 'error') return <p>Error: {error}</p>
+    if (!data || data.length === 0) return <p>No data available</p>
 
     return <Table {...props} />
 }
