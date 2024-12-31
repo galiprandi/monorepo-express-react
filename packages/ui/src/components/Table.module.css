@@ -1,0 +1,29 @@
+.table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid var(--color-borders);
+
+  & th,
+  & td {
+    border: 1px solid var(--color-borders);
+    padding: 8px;
+  }
+
+  & thead {
+    & th {
+      text-align: left;
+      border-bottom: 2px solid #000000;
+    }
+  }
+
+  & tbody {
+    & tr {
+      &:nth-child(odd) {
+        background-color: var(--color-borders);
+        ;
+      }
+    }
+  }
+}

@@ -1,36 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '@ui/assets/vite.svg'
 import './App.css'
-import { Button } from 'react-bootstrap';
+import { Table } from './components/Table';
+
+const props = {
+  columns: ['File Name', 'Text', 'Number', 'Hex'],
+  data: [
+    ['file1.cvs', 'RgTya', 64075909, 0xDEADBEEF],
+    ['file2.cvs', 'RgTya', 64075909, 0xDEADBEEF],
+    ['file3.cvs', 'RgTya', 64075909, 0xDEADBEEF],
+
+  ]
+}
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href='https://vite.dev' target='_blank' rel='noreferrer'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank' rel='noreferrer'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <Button variant="primary">Primary</Button>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="bg-primary">
+        <h2 >
+          React test App
+        </h2>
+      </header>
+      <main>
+        <Table {...props} />
+      </main>
     </>
   )
 }
