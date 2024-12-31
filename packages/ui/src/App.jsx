@@ -1,5 +1,6 @@
 import './App.css'
 import { Table } from './components/Table';
+import { useFilesData } from './hooks/useFilesData';
 
 const props = {
   columns: ['File Name', 'Text', 'Number', 'Hex'],
@@ -13,6 +14,9 @@ const props = {
 
 
 function App() {
+  const { data, status, error } = useFilesData();
+
+  console.log(data, status, error)
 
   return (
     <>
