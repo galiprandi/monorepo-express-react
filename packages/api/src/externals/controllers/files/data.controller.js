@@ -14,7 +14,7 @@ export const getFilesDataController = async (req, res) => {
         if (fileName) {
             // Process a single file if fileName is provided
             const fileData = await processSingleFileService(fileName);
-            return res.json(fileData);
+            return res.json([fileData]);
         }
 
         // Process all files if no fileName is provided
