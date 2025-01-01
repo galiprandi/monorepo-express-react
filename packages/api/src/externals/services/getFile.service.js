@@ -10,7 +10,7 @@ export const getFile = async (fileName) => {
     logger.info(`Successfully fetched file: ${fileName}`)
     return response.data
   } catch (error) {
-    logger.error(`Error fetching file ${fileName}:`, error.message)
+    logger.error(error, `Error fetching file ${fileName}:`)
     throw new Error(`Failed to fetch file ${fileName} from the external API.`)
   }
 }
