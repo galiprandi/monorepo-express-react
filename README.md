@@ -100,7 +100,6 @@ Installs **Husky** hooks. You should run this after cloning the repository or wh
 - **Express.js**: Backend framework for building RESTful APIs.
 - **React**: Frontend framework for building user interfaces.
 - **Vite**: Fast build tool for modern web development.
-- **Lint-Staged**: Run linters on pre-committed files.
 - **StandardJS**: JavaScript style guide, linter, and formatter.
 
 ## License
