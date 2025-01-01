@@ -15,6 +15,22 @@ The API fetches data from an external service, processes it, and makes it availa
 - **Node.js**: v18 or higher
 - **pnpm**: Latest stable version recommended
 
+## API Routes
+
+### Health Check
+- `GET /health`
+  - Returns server health status
+
+### File Operations
+- `GET /files/data`
+  - Returns data of files
+  - Query Parameters:
+    - `fileName` (optional): Specific file name (e.g., file.csv)
+    - If no fileName is provided, returns data for all files
+
+- `GET /files/list`
+  - Returns a list of all available file names
+
 ## Author
 - **Name**: Germán Aliprandi
 - **Website**: [https://galiprandi.github.io/me/ext/](https://galiprandi.github.io/me/ext/)
