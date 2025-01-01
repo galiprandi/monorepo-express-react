@@ -1,4 +1,4 @@
-import { getFiles } from '../../services/getFiles.service.js';
+import { getFiles } from '../../services/getFiles.service.js'
 
 /**
  * Controller for /files/list endpoint.
@@ -6,10 +6,10 @@ import { getFiles } from '../../services/getFiles.service.js';
  * @param {Object} res The response object.
  */
 export const getFilesListController = async (req, res) => {
-    try {
-        const files = await getFiles();
-        res.json({ files });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-};
+  try {
+    const files = await getFiles()
+    res.json({ files })
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}

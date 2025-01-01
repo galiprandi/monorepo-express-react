@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 export const FilesTable = () => {
   const urlParams = new URLSearchParams(window.location.search)
   const fileName = urlParams.get('fileName') || ''
-  const { records, status, error } = useFilesData(fileName)
+  const { records, status } = useFilesData(fileName)
 
   const props = {
     columns: ['File Name', 'Text', 'Number', 'Hex'],
@@ -19,8 +19,7 @@ export const FilesTable = () => {
     const searchParams = new URLSearchParams({ fileName })
     window.location.search = searchParams.toString()
   }
-
-  const handleShowAllFiles = () => window.location.search = ''
+  const noDataAvailable = !records?.length || status === 'error'
 
   return (
     <>
@@ -28,14 +27,12 @@ export const FilesTable = () => {
         <input type='text' name='fileName' id='fileName' placeholder='Search by file name' defaultValue={fileName} />
         <button type='submit'>Search</button>
         {/* reset form button */}
-        <button type='button' onClick={handleShowAllFiles}>Show All Files</button>
+        <button type='button' onClick={() => { window.location.search = '' }}>Show All Files</button>
       </Form>
 
       <br />
       {status === 'loading' && <p>Loading...</p>}
-      {
-      !records?.length || status === 'error' && <p>No data available</p>
-    }
+      {noDataAvailable && <p>No data available</p>}
       <Table {...props} />
     </>
   )

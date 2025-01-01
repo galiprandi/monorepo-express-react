@@ -15,5 +15,4 @@ app.use('/health', healthRoute)
 app.use('/files', filesDataRoute)
 app.use('/files', filesListRoute)
 
-
 export default app
