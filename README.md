@@ -75,10 +75,6 @@ Builds the frontend application using Vite.
 
 Runs **StandardJS** to lint the entire project.
 
-### `pnpm lint-staged`
-
-Runs linting on staged files before committing, ensuring code style consistency.
-
 ### `pnpm prepare`
 
 Installs **Husky** hooks. You should run this after cloning the repository or when updating Husky.
