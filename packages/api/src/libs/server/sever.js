@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from '../../middleware/cors.middleware.js'
-import { healthRoute } from '../../routes/health.get.route.js'
+import { healthRoute } from '../../routes/health/root.get.route.js'
 import { filesDataRoute } from '../../routes/files/data.get.route.js'
 import { filesListRoute } from '../../routes/files/list.get.route.js'
 
