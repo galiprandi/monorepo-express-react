@@ -1,0 +1,11 @@
+.search,
+.table {
+    margin: 1em auto;
+    max-width: 1120px;
+}
+
+.search form {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1em;
+}
