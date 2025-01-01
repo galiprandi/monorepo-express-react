@@ -12,5 +12,10 @@ export default defineConfig({
     alias: {
       '@ui': './'
     }
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/tests/setup.js'
   }
 })
