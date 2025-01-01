@@ -10,6 +10,11 @@ This project is structured as a **monorepo**, containing two main packages:
 
 The API fetches data from an external service, processes it, and makes it available for the frontend, which displays the data in a clean, user-friendly manner.
 
+## Requirements
+
+- **Node.js**: v18 or higher
+- **pnpm**: Latest stable version recommended
+
 ## Author
 - **Name**: Germán Aliprandi
 - **Website**: [https://galiprandi.github.io/me/ext/](https://galiprandi.github.io/me/ext/)
