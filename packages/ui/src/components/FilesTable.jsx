@@ -31,11 +31,12 @@ export const FilesTable = () => {
           <input type='text' name='fileName' id='fileName' placeholder='Search by file name' defaultValue={fileName} list='fileList' />
           {
             fileList.length > 1 &&
-            <datalist id='fileList'>
-              {fileList.map((fileName, index) => (
-                <option key={index} value={fileName} />
-              ))}
-            </datalist>}
+              <datalist id='fileList'>
+                {fileList.map((fileName, index) => (
+                  <option key={index} value={fileName} />
+                ))}
+              </datalist>
+}
           <button type='submit'>Search</button>
           {/* reset form button */}
           <button type='button' onClick={() => { window.location.search = '' }}>Show All Files</button>

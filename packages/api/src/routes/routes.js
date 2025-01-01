@@ -11,4 +11,3 @@ routes.use('/health', healthRoute)
 // Files routes
 routes.use('/files', filesDataRoute)
 routes.use('/files', filesListRoute)
-
