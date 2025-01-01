@@ -44,3 +44,5 @@ export const processDataService = async () => {
 
   return allData
 }
+
+export default processDataService
