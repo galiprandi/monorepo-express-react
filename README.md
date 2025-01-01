@@ -2,11 +2,22 @@
 
 A monorepo setup using **Express.js** for the backend and **React** with **Vite** for the frontend. This project demonstrates a simple full-stack application with a focus on best practices, modularity, and modern JavaScript tooling.
 
+
 ## Description
 
 This project is structured as a **monorepo**, containing two main packages:
-1. **Backend (`/packages/api`)**: A REST API built with **Express.js** to handle requests.
-2. **Frontend (`/packages/ui`)**: A React-based client application using **Vite** for fast development and build times.
+
+```markdown
+## Project Structure
+packages/
+├── api/           # Backend Express.js application
+│   ├── src/       # Source files
+│   └── tests/     # API tests
+└── ui/            # Frontend React application
+    └── src/       # React components and logic
+    └── tests/     # Frontend tests
+```
+
 
 The API fetches data from an external service, processes it, and makes it available for the frontend, which displays the data in a clean, user-friendly manner.
 
@@ -14,6 +25,14 @@ The API fetches data from an external service, processes it, and makes it availa
 
 - **Node.js**: v18 or higher
 - **pnpm**: Latest stable version recommended
+
+## Quick Start
+```bash
+git clone git@github.com:galiprandi/monorepo-express-react.git
+cd monorepo-express-react
+pnpm install
+pnpm dev
+```
 
 ## API Routes
 
@@ -30,13 +49,6 @@ The API fetches data from an external service, processes it, and makes it availa
 
 - `GET /files/list`
   - Returns a list of all available file names
-
-## Author
-- **Name**: Germán Aliprandi
-- **Website**: [https://galiprandi.github.io/me/ext/](https://galiprandi.github.io/me/ext/)
-
-## License
-This project is licensed under the **MIT License**.
 
 ## Installation
 
@@ -75,25 +87,50 @@ To start both the frontend and backend in development mode:
 
 ## Available Scripts
 
-### `pnpm dev`
+The project uses pnpm for package management and includes the following scripts:
 
-Runs the frontend and backend development servers simultaneously.
+### Development
+- `pnpm dev`
+  - Runs all packages in development mode simultaneously
+  - Starts the API server on port 3000
+  - Launches the frontend dev server on port 8000
+  - Enables hot reloading for both services
 
-### `pnpm start`
+### Production
+- `pnpm start`
+  - Launches all packages in production mode
+  - Requires running `pnpm build` first for the frontend
+  - Optimized for performance and production environment
 
-Starts both the backend and frontend in **production mode**. You need to build the frontend first with `pnpm build`.
+### Building
+- `pnpm build`
+  - Builds all packages for production
+  - Creates optimized frontend bundle using Vite
+  - Generates static assets in the `dist` directory
 
-### `pnpm build`
+### Testing
+- `pnpm test`
+  - Executes test suites across all packages
+  - Runs in parallel for faster execution
+  - Includes unit and integration tests
 
-Builds the frontend application using Vite.
+### Code Quality
+- `pnpm lint`
+  - Runs StandardJS linter across all packages
+  - Checks code style and formatting
+  - Identifies potential errors and inconsistencies
 
-### `pnpm lint`
+### Setup
+- `pnpm prepare`
+  - Installs and configures Husky git hooks
+  - Sets up pre-push test validation
+  - Required after initial clone or Husky updates
 
-Runs **StandardJS** to lint the entire project.
-
-### `pnpm prepare`
-
-Installs **Husky** hooks. You should run this after cloning the repository or when updating Husky.
+### Workspace Commands
+All commands can be run for specific packages using the filter flag:
+```bash
+pnpm --filter=@package-name command
+```
 
 ## Dependencies
 
@@ -101,6 +138,11 @@ Installs **Husky** hooks. You should run this after cloning the repository or wh
 - **React**: Frontend framework for building user interfaces.
 - **Vite**: Fast build tool for modern web development.
 - **StandardJS**: JavaScript style guide, linter, and formatter.
+
+
+## Author
+- **Name**: Germán Aliprandi
+- **Website**: [https://galiprandi.github.io/me/ext/](https://galiprandi.github.io/me/ext/)
 
 ## License
 
