@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_URL } from '../libs/env/config'
 
 /**
  * Custom hook to fetch table data from the given URL.
@@ -16,7 +17,7 @@ export const useFilesData = () => {
             setStatus('loading')
             setError(null)
             try {
-                const response = await fetch('http://localhost:3000/files/data')
+                const response = await fetch(`${API_URL}/files/data`)
                 if (!response.ok) {
                     throw new Error('Network response was not ok')
                 }
