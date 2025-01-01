@@ -44,5 +44,3 @@ export const processData = async () => {
 
   return allData
 }
-
-export default processData

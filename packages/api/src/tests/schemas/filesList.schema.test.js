@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+import { expect, describe, it } from 'chai'
 import { filesListSchema } from '../../externals/schemas/filesList.schema.js'
 
 describe('filesList Schema', () => {
