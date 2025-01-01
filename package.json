@@ -12,6 +12,7 @@
     "start": "pnpm --parallel --filter=@* start",
     "build": "pnpm --parallel --filter=@* build",
     "lint": "pnpm --parallel --filter=@monorepo-express-react/* lint",
+    "test": "pnpm --parallel --filter=@* test",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -25,7 +26,9 @@
   "dependencies": {
     "husky": "^9.1.7"
   },
-  "lint-staged": {
-    "*.js": "pnpm --filter=@monorepo-express-react/* lint --fix"
+  "husky": {
+    "hooks": {
+      "pre-push": "pnpm --filter=@monorepo-express-react/* test"
+    }
   }
 }
