@@ -12,8 +12,7 @@
     "start": "pnpm --parallel --filter=@* start",
     "build": "pnpm --parallel --filter=@* build",
     "lint": "pnpm --parallel --filter=@monorepo-express-react/* lint",
-    "test": "pnpm --parallel --filter=@* test",
-    "prepare": "husky install"
+    "test": "pnpm --parallel --filter=@* test"
   },
   "keywords": [],
   "author": "",
