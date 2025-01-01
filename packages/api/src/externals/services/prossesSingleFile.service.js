@@ -1,5 +1,5 @@
 import logger from "../../libs/logger/logger.js";
-import { getFiles } from "./getFiles.service.js";
+import { getFile } from "./getFile.service.js";
 import { parseFile } from "./parseFile.service.js";
 
 /**
@@ -10,7 +10,7 @@ import { parseFile } from "./parseFile.service.js";
 export const processSingleFileService = async (fileName) => {
     try {
         // Step 1: Fetch the content of the file
-        const rawContent = await getFiles(fileName);
+        const rawContent = await getFile(fileName);
         if (!rawContent) {
             logger.warn(`File ${fileName} is empty. Skipping.`);
             return { file: fileName, lines: [] };

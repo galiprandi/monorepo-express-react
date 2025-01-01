@@ -7,7 +7,7 @@ import logger from '../../libs/logger/logger.js'
  * Processes all available files and returns the parsed data.
  * @returns {Array<Object>} An array of parsed data objects from all valid files.
  */
-export const processData = async () => {
+export const processDataService = async () => {
   const allData = []
 
   try {
