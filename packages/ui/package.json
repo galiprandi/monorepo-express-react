@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite preview",
     "dev": "vite",
     "build": "vite build",
     "lint": "standard --fix",
-    "test": "vitest run",
-    "preview": "vite preview"
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^18.3.1",
