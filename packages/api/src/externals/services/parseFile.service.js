@@ -17,7 +17,7 @@ export const parseFile = (rawFileContent) => {
     const columns = line.split(',')
 
     if (columns.length !== expectedColumns.length) {
-      logger.warn('Skipping invalid line:', line)
+      logger.warn(`Skipping invalid line: "${line}"`)
       continue
     }
 
@@ -32,7 +32,7 @@ export const parseFile = (rawFileContent) => {
       lineSchema.parse(lineData)
       parsedData.push(lineData)
     } catch (error) {
-      logger.warn('Invalid line:', lineData, error.errors)
+      logger.warn(`Invalid line data for line: "${line}"`)
     }
   }
 

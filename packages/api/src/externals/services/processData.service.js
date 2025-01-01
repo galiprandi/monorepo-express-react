@@ -33,12 +33,12 @@ export const processDataService = async () => {
 
         logger.info(`Successfully processed file: ${fileName}`)
       } catch (error) {
-        logger.error(error, `Error processing file ${fileName}:`)
+        logger.error(`Error processing file ${fileName}:`)
         // Continue with the next file without interrupting the loop
       }
     }
   } catch (error) {
-    logger.error(error, 'Failed to fetch the list of files:')
+    logger.error(error, 'Error processing data.')
     throw new Error('Error processing data.')
   }
 
