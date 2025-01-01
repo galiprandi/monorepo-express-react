@@ -1,8 +1,6 @@
 import express from 'express'
 import cors from '../../middleware/cors.middleware.js'
-import { healthRoute } from '../../routes/health/root.get.route.js'
-import { filesDataRoute } from '../../routes/files/data.get.route.js'
-import { filesListRoute } from '../../routes/files/list.get.route.js'
+import { routes } from '../../routes/routes.js'
 
 const app = express()
 
@@ -11,8 +9,6 @@ app.use(express.json())
 app.use(cors)
 
 // Routes
-app.use('/health', healthRoute)
-app.use('/files', filesDataRoute)
-app.use('/files', filesListRoute)
+app.use('/', routes)
 
 export default app
