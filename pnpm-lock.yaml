@@ -11,6 +11,10 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+    devDependencies:
+      standard:
+        specifier: ^17.1.2
+        version: 17.1.2
 
   packages/api:
     dependencies:
@@ -4046,10 +4050,10 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-standard-jsx@11.0.0(eslint-plugin-react@7.37.3(eslint@9.17.0))(eslint@8.57.1):
+  eslint-config-standard-jsx@11.0.0(eslint-plugin-react@7.37.3(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
-      eslint-plugin-react: 7.37.3(eslint@9.17.0)
+      eslint-plugin-react: 7.37.3(eslint@8.57.1)
 
   eslint-config-standard@17.1.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-n@15.7.0(eslint@8.57.1))(eslint-plugin-promise@6.6.0(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
@@ -5516,7 +5520,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
       eslint-config-standard: 17.1.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-n@15.7.0(eslint@8.57.1))(eslint-plugin-promise@6.6.0(eslint@8.57.1))(eslint@8.57.1)
-      eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.37.3(eslint@9.17.0))(eslint@8.57.1)
+      eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.37.3(eslint@8.57.1))(eslint@8.57.1)
       eslint-plugin-import: 2.31.0(eslint@8.57.1)
       eslint-plugin-n: 15.7.0(eslint@8.57.1)
       eslint-plugin-promise: 6.6.0(eslint@8.57.1)

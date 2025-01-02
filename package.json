@@ -30,5 +30,8 @@
     "hooks": {
       "pre-push": "pnpm --filter=@monorepo-express-react/* test"
     }
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
   }
 }
