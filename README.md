@@ -18,6 +18,9 @@ packages/
     └── tests/     # Frontend tests
 ```
 
+## Demo
+
+![Application Screenshot](./docs/screenshot-1.png)
 
 The API fetches data from an external service, processes it, and makes it available for the frontend, which displays the data in a clean, user-friendly manner.
 
